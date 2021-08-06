@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Tip Calculator</title>
+        <link href = "styles.css" rel = "stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src = "script.js" defer></script>
+    </head>
+    <body class = "body">
+        <div class = "calculator">
+            <div class = "description"> Tip Calculator</div>
+            <div class = "billing">
+                <p>How much was your bill?</p>
+                <input type = "text" placeholder = "Bill Amount" id = "input">
+            </div>
+            <div class = "service">
+                <p>How much do you wish to tip?</p>
+                <input id='tiprange' type = "range" name = "tip" min = "0" max = "100" step = "5" on="updatePercent(this)" 
+                onchange="updatePercent(this)">
+                <label id = "tipTxt" for = "tip">Percent Tip</label>
+            </div>
+            <button onclick = "calculateTip()">CALCULATE!</button>
+            <div class = "amount">
+                <p>You should pay: </p>
+                <p class = "pay" id = "amountToPay">$0</p>
+            </div>
+        </div>
+    </body>
+</html>
