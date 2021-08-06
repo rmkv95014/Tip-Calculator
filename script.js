@@ -15,10 +15,10 @@ function calculateTip()
     {
         let billAmount = parseInt(document.getElementById("input").value);
         let pay = billAmount + billAmount * (tip/100)
-        document.getElementById("amountToPay").innerText = "$" + pay;
+        if(pay != NaN) document.getElementById("amountToPay").innerText = "$" + pay;
+        else document.getElementById("amountToPay").innerText = "$0"
     } catch (error) {
-        // alert("Unable to Calculate tip needed to pay, please try again");
-        alert(error)
+        alert("Unable to Calculate tip needed to pay, please try again");
     }
     finally {
         return;
