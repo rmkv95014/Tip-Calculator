@@ -13,7 +13,7 @@ function calculateTip()
 {
     try 
     {
-        let billAmount = parseInt(document.getElementById("input").value);
+        let billAmount = parseFloat(document.getElementById("input").value);
         let pay = billAmount + billAmount * (tip/100)
         if(pay != NaN) document.getElementById("amountToPay").innerText = "$" + pay;
         else document.getElementById("amountToPay").innerText = "$0"
