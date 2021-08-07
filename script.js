@@ -21,7 +21,7 @@ function calculateTip()
     {
         let billAmount = parseFloat(document.getElementById("input").value);
         let pay = billAmount + billAmount * (tip/100)
-        if(pay != NaN) document.getElementById("amountToPay").innerText = "$" + pay;
+        if(pay != NaN) document.getElementById("amountToPay").innerText = "$" + Math.round(pay * 100) / 100;
         else document.getElementById("amountToPay").innerText = "$0"
     } catch (error) {
         alert("Unable to Calculate tip needed to pay, please try again");
