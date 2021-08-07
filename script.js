@@ -3,6 +3,12 @@ let tip;
 // when the window loads, update the text
 window.onload += updatePercent();
 //changes the text next to the slider based on the slider's value
+document.addEventListener("keypress", function(event) {
+    if(event.keyCode == 13)
+    {
+        calculateTip();
+    }
+});
 function updatePercent()
 {
     tip = document.getElementById('tiprange').value;
